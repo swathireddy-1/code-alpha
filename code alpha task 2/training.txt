@@ -1,0 +1,64 @@
+PHISHING AWARENESS TRAINING
+===========================
+
+PURPOSE
+Learn how to recognize phishing emails, fake websites, and social engineering.
+This material is for defensive awareness and safe online behavior.
+
+1. WHAT IS PHISHING?
+Phishing is an attempt to trick someone into revealing sensitive information,
+opening an unsafe attachment, or taking an unsafe action. It may arrive by
+email, text message, phone call, social media, or workplace messaging apps.
+
+2. SPOTTING PHISHING EMAILS
+Watch for:
+- Unexpected requests for passwords, one-time codes, payments, or personal data.
+- Urgent or threatening language.
+- A sender name that looks familiar but uses an unfamiliar email address.
+- Unexpected attachments or links.
+- Generic greetings, unusual wording, or details that do not fit the situation.
+
+3. CHECKING LINKS AND WEBSITES
+- Read the full domain carefully and look for misspellings or extra words.
+- Be cautious with shortened links and unexpected links.
+- Do not enter credentials after following an unexpected message link.
+- Visit the official website or app independently.
+- A padlock / HTTPS means the connection is encrypted; it does not prove the
+  website is genuine.
+
+4. SOCIAL ENGINEERING
+Social engineering manipulates people by using:
+- Authority: pretending to be a manager or IT support.
+- Urgency: pressuring someone to act without checking.
+- Familiarity: pretending to be a colleague or trusted contact.
+- Curiosity or rewards: tempting someone to open a file or claim a prize.
+- Fear: threatening account closure or other consequences.
+
+5. SAFE RESPONSE: STOP - CHECK - REPORT
+STOP: Do not click, download, pay, reply, or share credentials.
+CHECK: Verify through a separate trusted channel, such as a known phone number
+       or the organization's approved support contact.
+REPORT: Use the organization's phishing-report option or contact its IT/security
+        team.
+
+6. IF YOU ALREADY CLICKED OR SHARED INFORMATION
+- Report it immediately and follow the organization's incident process.
+- Change an exposed password through the official website or app.
+- Change the password on other services if it was reused.
+- Tell the security team if you shared a one-time code or approved an unexpected
+  sign-in prompt.
+- Contact your bank or provider through official contact details if payment
+  information was involved.
+
+7. GOOD SECURITY HABITS
+- Use unique passwords and a trusted password manager.
+- Enable multi-factor authentication.
+- Never share passwords or one-time codes.
+- Keep devices, browsers, and security software updated.
+- Confirm unusual requests using a second trusted channel.
+
+REMEMBER
+Think before you click. Pause, verify, and report.
+
+This is general awareness material. Follow your workplace or school's own
+security policies and reporting procedures.

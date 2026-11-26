@@ -1,0 +1,57 @@
+====================================================================
+SECURE CODING REVIEW - SUMMARY & SAST VERIFICATION CHECKLIST
+====================================================================
+
+1. AUDIT OVERVIEW
+-----------------
+Target Application : vulnerable_app.py (Python / Flask)
+Remediated Version : secure_app.py
+Total Flaws Found  : 6 (3 Critical, 2 High, 1 Medium)
+
+2. VULNERABILITY SUMMARY
+------------------------
+[CRITICAL] VULN-01: SQL Injection (CWE-89)
+  - Location : /login endpoint
+  - Fix      : Replaced f-string SQL query with parameterized '?' placeholders.
+
+[CRITICAL] VULN-02: OS Command Injection (CWE-78)
+  - Location : /ping endpoint
+  - Fix      : Added hostname regex allowlist and replaced os.popen() with
+               subprocess.run(..., shell=False).
+
+[CRITICAL] VULN-03: Reflected XSS & SSTI (CWE-79 / CWE-1336)
+  - Location : /search endpoint
+  - Fix      : Passed user input via Jinja2 template context variables instead
+               of string interpolation.
+
+[HIGH]     VULN-04: Plaintext Password Storage (CWE-256)
+  - Location : init_db() / login()
+  - Fix      : Implemented PBKDF2-SHA256 salted password hashing via Werkzeug.
+
+[HIGH]     VULN-05: Hardcoded Secret Key (CWE-798)
+  - Location : app.secret_key configuration
+  - Fix      : Loaded key dynamically from environment variables.
+
+[MEDIUM]   VULN-06: Debug Mode Enabled (CWE-489)
+  - Location : app.run(debug=True)
+  - Fix      : Disabled debug mode (debug=False).
+
+3. STATIC ANALYSIS (SAST) COMMANDS FOR CI/CD
+--------------------------------------------
+Run Bandit (Python security linter):
+  $ pip install bandit
+  $ bandit -r . -ll
+
+Run Semgrep (Multi-language pattern scanner):
+  $ pip install semgrep
+  $ semgrep --config=auto .
+
+4. PRE-DEPLOYMENT VERIFICATION CHECKLIST
+----------------------------------------
+[ ] All SQL queries use parameterized statements or an ORM.
+[ ] All user inputs rendered in HTML are auto-escaped by the template engine.
+[ ] Shell execution avoids shell=True and validates inputs against allowlists.
+[ ] No API keys, passwords, or secret keys exist in source code or Git history.
+[ ] Passwords are hashed with PBKDF2, bcrypt, or Argon2.
+[ ] Debug mode and verbose error stack traces are disabled in production.
+====================================================================
